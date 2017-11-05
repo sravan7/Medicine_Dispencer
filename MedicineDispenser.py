@@ -40,8 +40,8 @@ if (int(s[1])==0 and int(s[0])==1):
     message="Remainder for medicine to be taken"+name
     msg=MIMEText(message)
     msg['subject']='Take medicine:'+name
-    msg['From']='muppallasravankumar@gmail.com'
-    msg['To']='muppallasravankumar@gmail.com'
+    msg['From']='yourMail@gmail.com'
+    msg['To']='yourMail@gmail.com'
     hrs=int(t.split()[1])-int(seco.split()[0]);
     minu=int(t.split()[2])-int(seco.split()[1]);
     sec=int(t.split()[3])-int(seco.split()[2]);
@@ -51,7 +51,7 @@ if (int(s[1])==0 and int(s[0])==1):
     print "processing Mail"
     s=smtplib.SMTP('smtp.gmail.com')
     s.starttls()
-    s.login('muppallasravankumar@gmail.com','sravanvarma27@')
+    s.login('yourMail@gmail.com','Your password')
     s.sendmail(msg['From'],msg['To'],msg.as_string())
     s.close()
     print "Email sent"
